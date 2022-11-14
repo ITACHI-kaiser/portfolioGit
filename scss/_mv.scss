@@ -1,0 +1,49 @@
+.mv {
+  width: 100%;
+  height: 100vh;
+}
+// ローディングアニメーション
+
+
+// トップページボタンのアニメーション
+#top-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  position: fixed;
+  transition: 1s;
+  cursor: pointer;
+  z-index: 120;
+  border: #22222e 3px solid;
+  transition: .6s;
+}
+#top-btn:hover {
+  background-color: #22222e;
+  color: #fff;
+  border: solid 3px #fff;
+}
+.top-btn-mask {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: 'TOP';
+    color: #22222e;
+  }
+}
+.top-btn-mask:hover::before {
+  color: #fff;
+}
+#top-btn.active {
+  opacity: .8;
+  display: block;
+}

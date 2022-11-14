@@ -1,0 +1,142 @@
+.skill {
+  position: relative;
+  width: 100%;
+  &-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 700px;
+    background-color: #fff;
+  }
+  &-title {
+    z-index: 101;
+    position: absolute;
+    top: -7%;
+    right: 0;
+  }
+  &-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    &-area {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      &-box {
+        width: 240px;
+        height: 240px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgb(228, 227, 227);
+        margin: 20px auto;
+        border: 2px solid #444;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          border-radius: 50%;
+        }
+        img {
+          height: 60%;
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+// アニメーションスタイル
+.fadein {
+  opacity: 0;
+  transform: translate(0, 50px);
+  transition: .6s;
+  background-color: #333;
+}
+.fadein.scrollin {
+  opacity: 1;
+  transform: translate(0, 0);
+  background-color: #fff;
+}
+.fadein:nth-child(2) {
+  transition-delay: .3s;
+}
+.fadein:nth-child(3) {
+  transition-delay: .6s;
+}
+
+.fadein:nth-child(5) {
+  transition-delay: .3s;
+}
+.fadein:nth-child(6) {
+  transition-delay: .6s;
+}
+//ホバーアクション　
+.skill-container-area-box:nth-child(1):hover {
+  box-shadow: orange 5px 5px;
+}
+.skill-container-area-box:nth-child(2):hover {
+  box-shadow: blue 5px 5px;
+}
+.skill-container-area-box:nth-child(3):hover {
+  box-shadow: yellow 5px 5px;
+}
+.skill-container-area-box:nth-child(4):hover {
+  box-shadow: skyblue 5px 5px;
+}
+.skill-container-area-box:nth-child(5):hover {
+  box-shadow: palevioletred 5px 5px;
+}
+.skill-container-area-box:nth-child(6):hover {
+  box-shadow: #02025c 5px 5px;
+}
+.skill-container-area-box-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: Krungthep;
+  opacity: 0;
+  font-size: 38px;
+  transition: .6s;
+}
+.skill-container-area-box-title.active {
+  opacity: 1;
+}
+// .skill-container-area-box-title:first-child {
+//   color: orange;
+// }
+// .skill-container-area-box-title:nth-child(2) {
+//   color: blue;
+// }
+// .skill-container-area-box-title:nth-child(3) {
+//   color: yellow;
+// }
+// .skill-container-area-box-title:nth-child(4){
+//   color: skyblue;
+// }
+// .skill-container-area-box-title:nth-child(5){
+//   color: palevioletred;
+// }
+
+// .skill-container-area-box-title:last-child {
+//   color: #02025c;
+// }
+
+@media screen and (max-width: 480px) {
+  .skill-background {
+    width: 60%;
+    height: 70vh;
+  }
+  .skill-container {
+    height: 80vh;
+  }
+  .skill-container-area-box {
+    width: 140px;
+    height: 140px;
+
+  }
+}

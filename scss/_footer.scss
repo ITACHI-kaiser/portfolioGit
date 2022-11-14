@@ -1,0 +1,38 @@
+.footer {
+  &-wrap {
+    width: 100%;
+    display: flex;
+    &-left {
+      width: 50%;
+      height: 100%;
+      padding: 36px;
+      font-family: Great Vibes;
+      font-size: 2em;
+      line-height: 2em;
+      color: #fff;
+      transform: rotate(-15deg);
+    }
+    &-right {
+      width: 50%;
+      height: 100%;
+      position: relative;
+      padding: 36px;
+      line-height: 2.5em;
+    }
+    &-nav {
+      &-list {
+        display: flex;
+        justify-content: space-around;
+        &-sns img {
+          width: 32px;
+          // line-height: 2.5em;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer-wrap-left {
+    transform: rotate(0deg);
+  }
+}

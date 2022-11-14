@@ -1,0 +1,232 @@
+.work {
+  position: relative;
+  &-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-wrap {
+      width: 80vw;
+      height: 50vh;
+      max-width: 700px;
+      background-color: #fff;
+      opacity: .8;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      &-left {
+        width: 65%;
+        height: 100%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-weight: bold;
+        }
+        &-span1 {
+          color: #f80324;
+        }
+        &-span2 {
+          color: #03246b;
+        }
+        &-span3 {
+          color: rgb(3, 126, 3);
+        }
+        &-p {
+          vertical-align: middle;
+          line-height: 1.5em;
+          width: 70%;
+          height: 80%;
+          padding: 12px 24px;
+          border-left: #9e0016 2px solid;
+          font-size: 1.1em;
+        }
+      } 
+      &-right {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    // ページ移動画面
+    &-nav {
+      width: 70%;
+      height: 80%;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+    &-list {
+      width: 100%;
+      text-align: center;
+      vertical-align: middle;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+    &-item {
+      background-color: #fff;
+      display: block;
+      padding: 12px 0;
+      border: #000 solid 2px;
+      font-size: 24px;
+      font-family: Krungthep;
+      width: 100%;
+      outline: 1px solid;
+      outline-color: #333;
+      outline-offset: 0px;
+      display: inline-block;
+      transition: .3s;
+    }
+  }
+  
+  
+
+  &-area {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+  }
+  &-title {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    z-index: 10;
+  }
+  &-loop {
+    display: flex;
+    width: 100vw;
+    height: 40vh;
+    overflow: hidden;
+  }
+  &-loop-2 {
+    display: flex;
+    width: 100vw;
+    height: 40vh;
+    overflow: hidden;
+  }
+  &-loopWrap {
+   display: flex;
+    height: 100%;
+ 
+    filter: blur(2px);
+  }
+  &-loopWrap-2 {
+    display: flex;
+    height: 100%;
+    filter: blur(2px);
+  }
+  &-loop-2 {
+    display: flex;
+    width: 100vw;
+    height: 40vh;
+    background-color: #fff;
+  }
+  &-loopWrap-bottom {
+    height: 100%;
+    filter: blur(2px);
+    display: flex;
+  }
+  &-loopWrap-bottom-2 {
+    height: 100%;
+    filter: blur(2px);
+    display: flex;
+  }
+}
+.work-container-list li:nth-child(1) {
+  color: #f80324;
+  
+}
+.work-container-list li:nth-child(2) {
+  color: #03246b;
+ 
+}
+.work-container-list li:nth-child(3) {
+  color: rgb(3, 126, 3);
+  
+}
+.work-container-item:hover {
+  animation: light .8s infinite;
+}
+// リンクボタンホバー　アニメーション
+@keyframes light {
+  100% {
+    outline-color: transparent;
+    outline-offset: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .work-container-wrap {
+    display: block;
+    width: 100vw;
+    height: 50vh;
+  }
+  .work-container-wrap-left {
+    width: 100%;
+    height: 40%;
+    font-size: 15px;
+  }
+  .work-container-wrap-left p {
+    width: 100%;
+    height: 100%;
+  }
+  .work-container-wrap-right {
+    width: 100%;
+  }
+  .work-container-list {
+    height: 20vh;
+  }
+}
+
+.work-loopWrap {
+  animation: loop2 10s linear infinite;
+}
+.work-loopWrap-2 {
+  animation: loop 10s  linear infinite;
+}
+.work-loopWrap-bottom {
+  animation: loopBottom 10s linear infinite;
+}
+.work-loopWrap-bottom-2 {
+  animation: loopBottom2 10s linear infinite;
+}
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+@keyframes loopBottom {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+@keyframes loopBottom2 {
+  0% {
+    transform: translateX(-300%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
